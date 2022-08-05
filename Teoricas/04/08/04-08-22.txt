@@ -1,0 +1,84 @@
+CLASE TEORICA   4/8/22
+
+C es un lenguaje altamente tipado. Hay que indicar el tipo de la variable explicitamente. 
+
+-- Hello world con print-- 
+En python:
+    print ("Hello world")
+
+En C:
+    int main(void) {
+        puts ("Hello world");
+
+        return 0;
+    }
+
+-- print con printf --
+    int main(void) {
+        printf("Hello world\n");
+
+        return 0;
+    }
+
+-- Import --
+En python:
+    import ...
+
+En C:
+    #include ... (ejemplo de libreria: <stdio.h>)
+----------------
+
+-- INDENTACION --
+En C, la indentacion no importa. Lo que importa son las "{}". Igual se indenta para que sea mas legible el codigo. 
+
+-- COMO FUNCIONA EL C --
+
+Yo armo mi codigo y cuando llamo al archivo con "gcc 'archivo'.c" pasa esto:
+
+[hello.c] --preprocesa(cpp)--> ['archivo'.E] --compila(cc)--> ['archivo'.s] --as--> ['archivo'.o] 
+
+puts/printf
+['otro'.so] --se mete en--> ['archivo'.o] --linker--> [hello] -> ejecutable
+
+-- COMANDOS -- 
+gcc hello.c (compila y genera el binario)
+./ (corre el archivo compilado)
+
+proceso de compilado:
+gcc -E hello.c -o hello.E (preprocesamiento)
+gcc -S hello.c -o hello.S (compilacion)
+gcc -c hello.c -o hello.o (genera el ejecutable)
+--
+-o es para definir el archivo de output.
+
+-- FUNCIONES -- 
+
+Tienen:
+- Un tipo de retorno (int, void, etc. )
+- Un nombre (main)
+- Parametros (void, etc.)
+
+ej:
+    int main (void){  }
+
+Si la funcion tiene 'int' al principio, tiene que retornar si o si un entero. 
+Si la funcion tiene un 'void' al principio, no tiene que devolver nada. 
+
+En C, el programa siempre empieza por 'main'. Entonces si defino una funcion despues del main, probablemente se 
+genere un warning. Para que eso no pase, tengo que declarar la funcion antes del 'main', o puedo decirle al compilador que la 
+funcion existe, pero esta definida en otro lado. 
+---
+void saludar(void); --> (indica que esta funcion existe)
+
+int main(void)
+{
+    saludar();
+    return 0;
+}
+
+void saludar (void)
+{
+    puts("Hello world");
+}
+---
+
