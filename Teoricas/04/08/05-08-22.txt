@@ -1,1 +1,78 @@
-hola
+CLASE TEORICA   5/8/22
+
+Ejemplo:
+#include <stdio.h>
+
+int main (void)
+{
+    int entero = 12345; 
+    float variable_float = 0.8;
+
+    printf ("El valor de 'entero' es: %i\n", entero)   ['%i' indicador de int. Printea el texto y el int en el indicador]
+    printf ("El valor del float es: %3.2f\n", variable_float)  ['%3.2f' indicador de float, 3 digitos total, 2 despues de la coma]
+
+    return 0;
+}
+
+A 'printf' le puedo pasar cosas con formato, mientras que al 'puts' no le puedo poner un formato. 
+
+
+-- Comandos para compilar -- 
+
+(Antes del nombre del archivo)
+-Wall (Warnings all, muestra las warnings que por omision se callan)
+-pedantic (Los warnings que son de estandar los muestra como errores)
+-std=c11 (define el estandar de codigo. c11 es el minimo que tenemos que usar, pero hay tmb c18)
+
+(Despues del nombre del archivo)
+-o (especifica el archivo de output)
+
+
+-- Tipos de variable -- 
+- char          - 1 byte 
+                - haciendo "%c\n" en un printf y despues pasando un caracter, imprime ese caracter. Si pongo 'a', imprime la 'a' 
+                  pero si pongo 97, imprime 'a'. (Use el ascii). Si pongo "%i\n" y le paso 'a', me imprime 97. (Numero ascii de 'a')
+
+- short         - 2 bytes
+- int           - 4 bytes
+- long int      - 8 bytes
+- float         - 4 bytes 
+- double        - 8 bytes
+- void          - 1 bytes
+
+-- Tipos de operaciones --
++ suma
+- resta 
+* multiplicacion
+/ division
+pow(a,b) potencia (tengo que agregar #include <math.h>)
+++ aunmenta x en 1 --> puedo tener x++(postincremento) y ++x(preincremento)
+    z = x++ --> primero guarda z = x y despues x = x+1
+    z = ++x --> primero guarda x = x+1 y despues z = x
+-- disminuye x en 1 --> puedo tener y--(postdecrimento) y --y(predecrimento)
+    z = y++ --> primero guarda z = y y despues x = y-1
+    z = ++y --> primero guarda y = y-1 y despues z = y
++= mas igual
+-= menos igual
+/= div igual
+*= mult igual
+== igual que python
+!= distinto
+! -> not
+&& -> ampersand (and)
+|| -> or
+
+Todas las operaciones con ints son truncas. (En la division, divide entero)
+Si una de las variables no es un int, no se trunca. 
+
+-- Condicionales -- 
+
+if (condicion) {
+    ...
+} else if {
+    ...
+} else {
+    ...
+}
+
+
