@@ -16,9 +16,7 @@ int main (void){
         std:: cout << "Numero generado: " << n << std::endl;
         std:: cout << "1 si es correcto; 0 si es menor; 2 si es mayor: ";
         std:: cin >> validate;
-        if (validate == 1){
-            std::cout << "Has acertado! El numero era "<< n << std::endl;
-        }else if (validate == 0){
+        if (validate == 0){
             max = n;
         }else if (validate == 2){
             min = n;
