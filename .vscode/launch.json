@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": true,
       "externalConsole": false,
-      "cwd": "/Users/maxi/Documents/GitHub/clases/Tutoriales",
-      "program": "/Users/maxi/Documents/GitHub/clases/Tutoriales/build/Debug/outDebug",
+      "cwd": "/Users/maxi/Documents/GitHub/clases",
+      "program": "/Users/maxi/Documents/GitHub/clases/build/Debug/outDebug",
       "MIMode": "gdb"
     }
   ]
